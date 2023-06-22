@@ -3,7 +3,6 @@ FROM {{cookiecutter.base_image}}
 WORKDIR app/
 RUN apt-get update && \
       apt-get -y install libpq-dev python3-dev gcc g++
-
 COPY .streamlit .streamlit
 COPY {{cookiecutter.project_slug}} {{cookiecutter.project_slug}}
 COPY ./poetry.lock .
